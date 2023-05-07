@@ -54,7 +54,7 @@ matchCall)
 #            print(opfct(startVec))                    
             nlsObj <- try(optim(startVec, opfct, hessian = TRUE, method = "L-BFGS-B", 
             lower = lowerLimits, upper = upperLimits, 
-            control = list(maxit = maxIt, parscale = psVec, reltol = relTol, trace = traceVal)), silent = silentVal)
+            control = list(maxit = maxIt, parscale = psVec, trace = traceVal)), silent = silentVal)
             # parscale is needed for the example in methionine.Rd
         } else {
 #            psVec <- abs(startVec)
